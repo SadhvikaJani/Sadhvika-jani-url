@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2e2f4a;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+textarea {
+    opacity: 0
+}
+
+#part,
+#part #part1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+#part  #part1 {
+    height: 100vh;
+    transition: height .7s
+}
+
+ #part1 h1 {
+    font-size: 50px;
+    color:#ffff;
+    margin-top: 50px;
+}
+h2{
+    color:#fff;
+}
+
+.input-box {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="button"] {
+    padding: 10px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    font-family: "Open Sans"
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    color: #2e2f4a;
+    transition: width .7s
+}
+
+input[type="text"]:disabled {
+    background-color: #c8d0de
+}
+
+input[type="button"] {
+    border-radius: 10px;
+    background-color: #171721;
+    color: white
+}
+
+
+input[type="button"]:disabled {
+    background-color: #424247
+}
+
+#url {
+    width: 400px;
+    margin-right: 0;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 24px;
+    margin-top: 50px;
+}
+
+#submit{
+    color: #000000;
+    background: rgb(241, 234, 234);
+    margin-top: 60px;
+}
+#submit:hover{
+    color: white;
+    background: rgb(10, 3, 106);
+    transform: scale(0.9);
+}
+
+@media only screen and (max-width: 1250px) {
+    #part,
+    #part #part1,
+    #part1 {
+        width: 100vw
+    }
+    .input-box,
+    .options {
+        width: 1000px
+    }
+    #url {
+        width: 1000px
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .options #body {
+        grid-template-columns: 1fr 1fr
+    }
+    #qr-code-wrapper {
+        display: none
+    }
+    h1 {
+        font-size: 50px
+    }
+    #part,
+    #part #part1,
+    #part1 {
+        width: 100vw
+    }
+    .input-box,
+    .options {
+        width: 800px
+    }
+    #url {
+        width: 700px
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 50px
+    }
+    #part,
+    #part #part1,
+    #part1 {
+        width: 100vw
+    }
+    .input-box,
+    .options {
+        max-width: 95vw
+    }
+    #url {
+        width: calc(100% - 100px)
+    }
+    h1 span::after {
+        content: "| URL shortener"
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .options #body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr
+    }
+    .options #body .options-left,
+    .options #body #custom-url,
+    .options #body #submit {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 span::after {
+        content: none
+    }
+    input[type="text"],
+    input[type="button"],
+    .options #body .options-left input {
+        font-size: 20px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #output-wrapper {
+        width: 100%
+    }
+    #copy {
+        width: 75px
+    }
+    .options #body #output {
+        box-sizing: border-box;
+        width: calc(100% - 75px)
+    }
+}
+
+#anchorTagContainer {
+    overflow-y: auto;
+    height: 120px;
+}
